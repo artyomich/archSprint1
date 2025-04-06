@@ -2,7 +2,7 @@ FROM node:18-slim
 
 ENV NODE_ENV development
 
-WORKDIR /app
+WORKDIR /frontend
 
 COPY package.json package-lock.json ./
 
@@ -10,7 +10,7 @@ RUN npm i \
     && npm i -g jest \
     && npx playwright install --with-deps chromium
 
-COPY . .
+COPY .. .
 
 CMD [ "yarn", "start" ]
 
