@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.4.0",
     "@playwright/test": "^1.45.0",
     "@types/node": "^20.14.9",
     "dotenv": "^16.0.2",
