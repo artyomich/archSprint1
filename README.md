@@ -48,3 +48,6 @@ useEffect(() => {
         });
     }, []);
 
+**Задание 2**
+Выполнено в DRAW.io ссылка на файл:
+https://github.com/artyomich/archSprint1_2/blob/master/arch_template_task2.drawio
