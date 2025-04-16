@@ -40,7 +40,6 @@
     "@babel/plugin-transform-runtime": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.24.0",
-    "@originjs/vite-plugin-federation": "^1.4.0",
     "@playwright/test": "^1.45.0",
     "@types/node": "^20.14.9",
     "autoprefixer": "^10.4.0",
@@ -52,6 +51,7 @@
     "postcss": "^8.4.0",
     "postcss-loader": "^7.0.0",
     "style-loader": "^4.0.0",
-    "wait-port": "^1.1.0"
+    "wait-port": "^1.1.0",
+    "@originjs/vite-plugin-federation": "^1.4.0"
   }
 }

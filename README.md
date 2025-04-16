@@ -7,18 +7,20 @@
     хостовое приложение (главный связующий): 
     host
     
-    дочерние приложения: 
+    дочерние приложения и используемые методы: 
     1. auth
     	-login
     	-register
     2. card
     	-create
     	-delete
-    	-like
+    	-like/dislike
     	-imagePopup
     3. profile
     	-editAvatarPopup
     	-editProfilePopup
+
+Все компоненты уникальны, кроме popupWithForm – компонент диалогового окна сохранения используется как в card, так и в profile.
 
 Используем инструмент сборки Vite в него добавляю vite-plugin-federation для реализации Module Federation в сборке.
 
@@ -48,6 +50,22 @@ useEffect(() => {
         });
     }, []);
 
+Пункт 3. Реализовать запуск не удалось.
+Compiled with problems:
+×
+ERROR in ./src/components/App.js 60:4-28
+Module not found: Error: Can't resolve 'auth/authUtils' in '/home/artem/dev/yp/architecture-sprint-1/frontend/microfrontend/host/src/components'
+ERROR in ./src/components/App.js 61:4-28
+Module not found: Error: Can't resolve 'card/cardUtils' in '/home/artem/dev/yp/architecture-sprint-1/frontend/microfrontend/host/src/components'
+ERROR in ./src/components/App.js 62:4-34
+Module not found: Error: Can't resolve 'profile/profileUtils' in '/home/artem/dev/yp/architecture-sprint-1/frontend/microfrontend/host/src/components'
+ERROR in ./src/components/Main.js 6:0-26
+Module not found: Error: Can't resolve './Card' in '/home/artem/dev/yp/architecture-sprint-1/frontend/microfrontend/host/src/components'
+
 **Задание 2**
+Добавлен брокер сообщений для асинхронных вызовов.
+Все взаимодействия сделаны через гейтвэй.
+Добавлен отдельный интерфейс для персонала.
+
 Выполнено в DRAW.io ссылка на файл:
 https://github.com/artyomich/archSprint1_2/blob/master/arch_template_task2.drawio

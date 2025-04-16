@@ -56,7 +56,7 @@ services:
       context: frontend
       dockerfile: dockerfile-frontend
     ports:
-      - 3000:3000
+      - 10100:10105
     depends_on:
       backend:
         condition: service_healthy
